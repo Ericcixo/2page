@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra | RevendeFácil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-white flex items-center justify-center min-h-screen p-4">
+    <div class="max-w-xl w-full bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+        <h2 class="text-3xl font-black mb-2 uppercase italic text-blue-500">Checkout</h2>
+        <p class="text-slate-400 mb-8 font-medium">Completa los datos para recibir tu cuenta instantáneamente.</p>
+        
+        <form action="contact.php" method="POST" class="space-y-6">
+            <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Correo para entrega</label>
+                <input type="email" name="customer_email" placeholder="ejemplo@correo.com" required 
+                class="w-full bg-slate-800 border border-slate-700 p-4 rounded-xl focus:outline-none focus:border-blue-500 transition">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Plataforma</label>
+                    <select name="platform" class="w-full bg-slate-800 border border-slate-700 p-4 rounded-xl">
+                        <option value="netflix">Netflix</option>
+                        <option value="hbo">HBO Max</option>
+                        <option value="disney">Disney+</option>
+                        <option value="reseller_pack">Pack Reseller (Consultar)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Método de Pago</label>
+                    <select name="payment" class="w-full bg-slate-800 border border-slate-700 p-4 rounded-xl">
+                        <option value="binance">Binance Pay (LTC/USDT)</option>
+                        <option value="paypal">PayPal (F&F)</option>
+                        <option value="crypto">Cripto Directo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="bg-blue-600/10 border border-blue-600/30 p-4 rounded-2xl flex justify-between items-center">
+                <span class="text-sm font-bold text-blue-400 uppercase">Total a pagar:</span>
+                <span class="text-2xl font-black">$4.50 USD</span>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-5 rounded-2xl font-black text-xl uppercase tracking-widest shadow-lg shadow-blue-900/40 transition-all">
+                Pagar y Recibir
+            </button>
+        </form>
+    </div>
+</body>
+</html>
